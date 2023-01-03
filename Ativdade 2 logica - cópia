@@ -1,0 +1,178 @@
+programa {
+  funcao inicio() {
+    //Atividade 1 Escreva um algoritmo em Portugol, que leia um número inteiro via teclado e mostre 
+    //na tela uma mensagem indicando se este número é par ou ímpar e se o número é positivo ou negativo. Veja os exemplos abaixo:
+    escreva("ATIVIDADE – Lógica de Programação 2\n")
+    escreva("Atividade 1\n")
+    inteiro num
+     escreva("Digite um numero: ")
+     leia(num)
+
+     se (num % 2 == 0 > 0){
+
+         escreva(" O numero:",num,"è Par e positivo\n")  
+     }
+     senao{
+      escreva("O numero:",num ,"è impar e negativo\n")
+     }
+    //Atividade 2 Com base na tabela abaixo, escreva um algoritmo em Portugol que leia o código de um item 
+    //(número inteiro de 1 a 6) e a quantidade comprada deste item (número inteiro). 
+    //A seguir, mostre na tela o valor total da conta e nome do produto que foi comprado.
+    inteiro produto, quantidade
+    
+		
+		escreva("--Digite 1 para Cachorro-quente --\n")
+    escreva("--Digite 2 para X-Salada --\n")
+    escreva ("--Digite 3 para X-Bacon--\n")
+    escreva("--Digite 4 para Bauru--\n")
+		escreva("--Digite 5 para Refrigerante--\n")
+		escreva("--Digite 6 Suco de laranja--\n")
+		leia(produto)
+
+    escreva("Quantidade")
+    leia(quantidade)
+			
+		escolha(produto)
+		{
+			caso 1:
+				escreva("Cachorro-quente\n","Valor total é:",quantidade * 10.00)
+				pare
+			caso 2:
+				escreva("X-Salada\n" , "Valor total é:",quantidade * 15.00)
+				pare
+			caso 3:
+				escreva("X-Bacon\n" , "Valor total é:",quantidade * 18.00)
+        pare
+      caso 4:
+				escreva("Bauru\n" , "Valor total é:",quantidade * 12.00)
+        pare
+      caso 5:
+				escreva("Refrigerante\n" , "Valor total é:",quantidade * 8.00)
+        pare
+      caso 6:
+				escreva("Suco de laranja\n" ,"Valor total é:",quantidade * 13.00)
+				pare
+			
+		}
+    //Atividade 3 Escreva um algoritmo em Portugol, que leia a idade de uma pessoa (número inteiro) 
+    //e apresente na tela se a pessoa está ou não apta a votar e se seu voto é obrigatório ou facultativo, conforme a tabela abaixo:
+    inteiro idade
+
+		escreva("Digite a sua idade\n")
+		leia(idade)
+	
+		
+		se (idade < 16)
+    {
+			escreva("Infelizmente você não pode votar!\n")
+		}
+	  se (idade >= 16 e idade <18)
+    {
+			escreva("Seu voto é facultativo!\n")
+		}
+		senao se (idade >=18 e idade <65)
+    {
+			escreva("Seu voto é Obrigatorio\n")
+		}
+    senao se (idade >=65)
+    {
+      escreva("Seu voto é facultativo")
+    }
+    //Atividade 4 Escreva um algoritmo em Portugol, que leia um valor com duas casas decimais, 
+    //equivalente ao salário de uma pessoa. Em seguida, calcule e mostre o valor que esta pessoa deve pagar de Imposto de Renda ou Isento, 
+    //segundo a tabela abaixo: real salario
+
+    escreva("Digite seu salário para a vericação de imposto de renda:")
+    leia(salario)
+    salario = Matematica.arredondar(salario, 2)
+
+    se(salario <= 2000.00)
+      escreva("Isento de imposto.")
+    senao se(salario >= 2000.01 e salario <= 3000.00)
+      escreva("O imposto a ser pago é de : \nR$", (salario * (8/100)))
+    senao se(salario >= 3000.01 e salario <= 4500.00)
+      escreva("O imposto a ser pago é de : \nR$", (salario * (18/100)))
+    senao
+      escreva("O imposto a ser pago é de : \nR$", (salario * (28/100)))
+        }
+ //Atividade 5 Escreva um algoritmo em Portugol, que leia 3 palavras (cadeia), que definem as características de um tipo de animal possível 
+ //segundo o diagrama abaixo, que deve ser lido da esquerda para a direita.        
+         cadeia palavra,tipo,tipo2
+
+ escreva("Qual tipo de animal: Vertebrado ou Invertebrado ")
+ leia(palavra)
+
+
+
+
+se(palavra == "vertebrado"){
+
+     escreva("Escolha Ave ou Mamifero ")
+     leia(tipo)
+
+            se(tipo == "ave"){
+            escreva("Escolha carnivoro ou onivoro ")
+            leia(tipo2)
+
+                  se(tipo2 == "carnivoro"){
+
+                  escreva("Seu animal é Águia")
+                  }senao{
+                  escreva("Seu animal é Pomba")
+                  }
+
+
+     }senao{
+//mamifero
+
+     escreva("Escolha herbivoro ou onivoro")
+     leia(tipo2)
+
+             se(tipo2 =="herbivoro"){
+
+             escreva("Seu animal é Vaca")
+             }senao{
+             escreva("Seu animal é homem")
+             }
+
+        }  
+
+
+  
+}senao{
+//invertebrado
+
+escreva("Escolha Inseto ou anelideo ")
+leia(tipo)
+
+se(tipo == "Inseto"){
+escreva("Escolha hematofago ou herbivoro ")
+leia(tipo2)
+
+se(tipo2=="hematofago"){
+
+escreva("Seu animal é pulga")
+
+}senao{
+  //herbivoro
+  escreva("Seu animal é lagarta")
+}
+
+}senao{
+  //anelideo
+  escreva("Escolha hematofago ou herbivoro ")
+leia(tipo2)
+
+se(tipo2=="herbivoro"){
+escreva("Seu animal é minhoca")
+}senao{
+escreva("Seu animal é sanguessuga")
+}
+
+
+}
+
+
+}
+  }
+}
